@@ -13,7 +13,7 @@ public class QuanLyThuVien2 {
         //Tạo mã
         String code = "";
         String[] tmp = book.getAuthor().split(" ");
-        code+=tmp[0].charAt(0);code+=tmp[tmp.length - 1].charAt(0);
+        code+=tmp[0].charAt(0);code+=tmp[tmp.length - 1].charAt(tmp[tmp.length - 1].length() - 1);
         code+=String.format("%02d%d%d", book.getYearPublished()%100, 
                 book.getGenre().trim().length(), book.getTitle().length()%10);
         book.setCode(code);
@@ -21,19 +21,3 @@ public class QuanLyThuVien2 {
         sv.submitObject("B21DCCN012", "CoWosBho", book);
     }
 }
-//Chưa test được
-//package RMI.B21DCCN012;
-//import RMI.BookX;
-//public class QuanLyThuVien2 {
-//    public static void main(String[] args) {
-//        BookX book = new BookX("B001", "1234", "Mark Twain", 1884, "Fiction");
-//        System.out.println(book);
-//        String code = "";
-//        String[] tmp = book.getAuthor().split(" ");
-//        code+=tmp[0].charAt(0);code+=tmp[tmp.length - 1].charAt(0);
-//        code+=String.format("%02d%d%d", book.getYearPublished()%100, 
-//                book.getGenre().trim().length(), book.getTitle().length()%10);
-//        book.setCode(code);
-//        System.out.println(book);
-//    }
-//}
