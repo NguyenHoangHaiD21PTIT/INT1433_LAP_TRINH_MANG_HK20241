@@ -2,6 +2,7 @@ package RMI.B21DCCN053;
 import java.rmi.*;
 import java.rmi.registry.*;
 import java.util.*;
+import java.net.URLEncoder;
 import RMI.CharacterService;
 public class MaHoaURL {
     public static void main(String[] args) throws Exception{
@@ -10,22 +11,9 @@ public class MaHoaURL {
         String s = sv.requestCharacter("B21DCCN053", "KkihaRAB");
         System.out.println(s);
         //b.
-        String ans = "";
-        for(char x: s.toCharArray()){
-            if(!Character.isDigit(x) && !Character.isAlphabetic(x)) ans+="%" +  String.format("%02X", (int) x);
-            else ans+=x;
-        }
+        String ans = URLEncoder.encode(s, "UTF-8");
         System.out.println(ans);
         //c.
         sv.submitCharacter("B21DCCN053", "KkihaRAB", ans);
     }
-//    public static void main(String[] args) {
-//        String s = "Hello World!", ans = "";
-//        for(char x: s.toCharArray()){
-//            if(!Character.isDigit(x) && !Character.isAlphabetic(x)) ans+="%" +  String.format("%02X", (int) x);
-//            else ans+=x;
-//        }
-//        System.out.println(ans);
-//    }
 }
-//Chưa test được
