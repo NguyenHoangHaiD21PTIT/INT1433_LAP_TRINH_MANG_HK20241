@@ -28,5 +28,3 @@ public class DemSoLanXH2 {
         sv.submitCharacter("B21DCCN012", "ctRfIejL", res);
     }
 }
-//Chưa test được
-
