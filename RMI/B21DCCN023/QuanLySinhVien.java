@@ -16,11 +16,10 @@ public class QuanLySinhVien {
         return res;
     }
     public static void main(String[] args) throws Exception{
-        //Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
-        //ObjectService sv = (ObjectService) rg.lookup("RMIObjectService");
-        //Student student = (Student) sv.requestObject("B21DCCN023", "lNV6xzmk");
-        //System.out.println(student);
-        Student student = new Student(1, "nguYEn van tAi tUAN", 2022);
+        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        ObjectService sv = (ObjectService) rg.lookup("RMIObjectService");
+        Student student = (Student) sv.requestObject("B21DCCN023", "lNV6xzmk");
+        System.out.println(student);
         student.setName(chuanhoa2(student.getName()));
         String code = String.format("B%d", student.getEnrollmentYear()%100);
         String []tmp = student.getName().split("\\s+");
@@ -29,7 +28,6 @@ public class QuanLySinhVien {
         student.setCode(code);
         System.out.println(student);
         //c.
-        //sv.submitObject("B21DCCN023", "lNV6xzmk", student);
+        sv.submitObject("B21DCCN023", "lNV6xzmk", student);
     }
 }
-//Chưa test được
