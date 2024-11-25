@@ -2,12 +2,12 @@ package RMI;
 import java.io.Serializable;
 public class Student implements Serializable {
     private static final long serialVersionUID = 20241130L;
-    private int id;
+    private String id;
     private String name;
     private int enrollmentYear;
     private String code;
     public Student() {}
-    public Student(int id, String name, int enrollmentYear) {
+    public Student(String id, String name, int enrollmentYear) {
         this.id = id;
         this.name = name;
         this.enrollmentYear = enrollmentYear;
