@@ -23,18 +23,4 @@ public class ChuyenDoiThapPhanLaMa {
         //c.
         sv.submitCharacter("B21DCCN032", "ADu6zRYE", rm);
     }
-//    public static void main(String[] args) {
-//        String s = "2024", rm = "";//roma
-//        int dec = Integer.parseInt(s);
-//        int[] tp = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};//thập phân
-//        String[] lm = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};// la mã
-//        for(int i = 0;i<tp.length;i++){
-//            while(dec >=tp[i]){
-//                rm+=lm[i];
-//                dec-=tp[i];
-//            }
-//        }
-//        System.out.println(rm);
-//    }
-//Chưa test được
 }
