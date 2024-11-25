@@ -2,12 +2,12 @@ package RMI;
 import java.io.Serializable;
 public class Employee implements Serializable{
     private static final long serialVersionUID = 20241119L;
-    private int id; 
+    private String id; 
     private String name; 
     private double baseSalary, finalSalary; 
     private int experienceYears;
     public Employee(){}
-    public Employee(int id, String name, double baseSalary, int experienceYears) {
+    public Employee(String id, String name, double baseSalary, int experienceYears) {
         this.id = id;
         this.name = name;
         this.baseSalary = baseSalary;
