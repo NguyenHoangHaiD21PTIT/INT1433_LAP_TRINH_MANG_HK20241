@@ -16,13 +16,4 @@ public class MaHoaBase64 {
         //
         sv.submitCharacter("B21DCCN029", "psd4Jmnt", ans);
     }
-//    public static void main(String[] args) {
-//        //a.
-//        String s = "HELLO";
-//        System.out.println(s);
-//        byte []tmp = Base64.getEncoder().encode(s.getBytes());
-//        String ans = new String(tmp);
-//        System.out.println(ans);
-//    }
-    //Chưa test được
 }
