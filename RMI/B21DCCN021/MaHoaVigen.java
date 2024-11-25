@@ -13,22 +13,12 @@ public class MaHoaVigen {
         String keyW = s.substring(0, idx), text = s.substring(idx + 1), ans = "";
         for(int i = 0;i<text.length();i++){
             char x = text.charAt(i), y = keyW.charAt(i % keyW.length());
-            char z = (char) ((x - 'A' + y - 'A') % 26 + 'A');
+            char z;
+            if (Character.isUpperCase(x)) z = (char) ((x - 'A' + y - 'A') % 26 + 'A');
+            else z = (char) ((x - 'a' + y - 'a') % 26 + 'a');
             ans+=z;
         }
         System.out.println(ans);
         sv.submitCharacter("B21DCCN021", "Y7YMXHs4", ans);
-    }
-//    public static void main(String[] args) {
-//        String s = "PTIT;HELLO";
-//        int idx = s.indexOf(";");
-//        String keyW = s.substring(0, idx), text = s.substring(idx + 1), ans = "";
-//        for(int i = 0;i<text.length();i++){
-//            char x = text.charAt(i), y = keyW.charAt(i % keyW.length());
-//            char z = (char) ((x - 'A' + y - 'A') % 26 + 'A');
-//            ans+=z;
-//        }
-//        System.out.println(ans);
-//    }  
+    } 
 }
-//Chưa test được
