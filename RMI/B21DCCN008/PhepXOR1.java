@@ -18,5 +18,4 @@ public class PhepXOR1 {
         sv.submitCharacter("B21DCCN008", "Xidb0Thk", res);
     }
 }
-//Chua test duoc
 
