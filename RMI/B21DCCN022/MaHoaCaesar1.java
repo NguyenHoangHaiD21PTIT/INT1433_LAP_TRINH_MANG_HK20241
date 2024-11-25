@@ -21,15 +21,4 @@ public class MaHoaCaesar1 {
         //c.
         sv.submitCharacter("B21DCCN022", "j4rStb2a", ans);
     }
-//    public static void main(String[] args) throws Exception{
-//        String s = "HELLO", ans = "";
-//        int dich = s.length()%7;
-//        for(char x: s.toCharArray()){
-//            char base = Character.isUpperCase(x) ? 'A' : 'a';
-//            x = (char) ((x - base - dich + 26) % 26 + base);
-//            ans+=x;
-//        }
-//        System.out.println(ans);
-//    }
 }
-//Chưa test được
