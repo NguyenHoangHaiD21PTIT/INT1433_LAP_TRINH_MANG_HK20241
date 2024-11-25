@@ -2,10 +2,10 @@ package RMI;
 import java.io.Serializable;
 public class Ticket implements Serializable{
     private static final long serialVersionUID = 20241133L;
-    private int id;
+    private String id;
     private String eventName, saleDate, ticketCode;
     public Ticket(){}
-    public Ticket(int id, String eventName, String saleDate) {
+    public Ticket(String id, String eventName, String saleDate) {
         this.id = id;
         this.eventName = eventName;
         this.saleDate = saleDate;
