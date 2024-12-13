@@ -7,20 +7,21 @@ public class DemSoLanXH {
         DataService_Service service = new DataService_Service();
         DataService port = service.getDataServicePort();
         List<Integer>a = port.getData(msv, qCode);
+        System.out.println(a); Collections.sort(a);
         System.out.println(a);
         int []cnt = new int[10005];
         for(int x: a) cnt[x]++;
-        List<vn.medianews.ArrayList> ans = new java.util.ArrayList<>();
+        List<String>ans = new java.util.ArrayList<>();
         for(int x: a){
             if(cnt[x]>0){
-                vn.medianews.ArrayList tmp = new vn.medianews.ArrayList();
-                tmp.getItem().add(x); tmp.getItem().add(cnt[x]);
+                String tmp = String.format("%d, %d", x, cnt[x]);
                 ans.add(tmp);
                 cnt[x] = 0;
             }
         }
-        for(vn.medianews.ArrayList x: ans) System.out.print(x.getItem() + ";");
-        port.submitDataIntMatrix(msv, qCode, ans);
+        for(String x: ans){
+            System.out.println(x);
+        }
+        port.submitDataStringArray(msv, qCode, ans);
     }
 }
-//Chờ log
