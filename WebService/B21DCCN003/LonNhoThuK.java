@@ -7,15 +7,12 @@ public class LonNhoThuK {
         DataService_Service service = new DataService_Service();
         DataService port = service.getDataServicePort();
         List<Integer>a = port.getData(msv, qCode);
-        System.out.println(a);
-        int k = a.get(0);
+        int k = a.get(0); a.remove(0);
+        System.out.println(a + " " + k);
         Collections.sort(a);
-        List<Integer>ans = new java.util.ArrayList<>();
-        port.submitDataIntArray(qCode, qCode, a);
-        int x = a.get(a.size() - k - 1), y = a.get(k);
-        ans.add(x); ans.add(y);
+        int nhoThuK = a.get(k - 1), lonThuK = a.get(a.size() - k);
+        List<Integer>ans = new java.util.ArrayList<>(Arrays.asList(lonThuK, nhoThuK));
         port.submitDataIntArray(msv, qCode, ans);
-        System.out.println(ans);
     }
 }
-//Chờ log
+
