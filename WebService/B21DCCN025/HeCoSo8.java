@@ -10,7 +10,7 @@ public class HeCoSo8 {
         System.out.println(a);
         List<String>res = new java.util.ArrayList<>();
         for(int n: a){
-            String oct = Integer.toOctalString(n), hex = Integer.toHexString(n);
+            String oct = Integer.toOctalString(n), hex = Integer.toHexString(n).toUpperCase();
             String tmp = oct + "|" + hex;
             res.add(tmp);
         }
@@ -18,4 +18,4 @@ public class HeCoSo8 {
         port.submitDataStringArray(msv, qCode, res);
     }
 }
-//Đã ping được nhưng ko có log
+
