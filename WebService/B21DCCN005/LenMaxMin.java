@@ -23,6 +23,6 @@ public class LenMaxMin {
         }
         String ans = strMax + ";" + strMin;
         System.out.println(ans);
-        port.submitCharacterString(qCode, qCode, ans);
+        port.submitCharacterString(msv, qCode, ans);
     }
 }
