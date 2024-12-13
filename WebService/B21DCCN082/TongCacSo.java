@@ -14,4 +14,4 @@ public class TongCacSo {
         port.submitDataInt(msv, qCode, tong);
     }
 }
-//Chờ log
+
