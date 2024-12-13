@@ -21,4 +21,3 @@ public class LoaiBoTrungNhau {
         port.submitDataIntArray(msv, qCode, ans);
     }
 }
-//ping được nhưng chưa có log
