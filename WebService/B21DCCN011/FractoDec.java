@@ -15,16 +15,12 @@ public class FractoDec {
         DataService_Service service = new DataService_Service();
         DataService port = service.getDataServicePort();
         double a = port.getDataDouble(msv, qCode);
+        a = Math.round(a * 100) / 100.0;
         System.out.println(a);
-        int tu, mau = 1;
-        while (a!=(int)a){
-            a*=10;
-            mau*=10;
-        }
-        tu = (int)a;
-        int tmp = gcd(tu, mau);
-        tu/=tmp; mau/=tmp;
-        List<Integer>ans = new java.util.ArrayList<>();
+        int tu, mau = 100;
+        tu = (int) (a * 100.0);
+        int tmp = gcd(tu, mau); tu/=tmp; mau/=tmp;
+        List<Integer> ans = new java.util.ArrayList<>();
         ans.add(tu); ans.add(mau);
         System.out.println(ans);
         port.submitDataIntArray(msv, qCode, ans);
