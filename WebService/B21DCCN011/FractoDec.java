@@ -30,4 +30,4 @@ public class FractoDec {
         port.submitDataIntArray(msv, qCode, ans);
     }
 }
-//Đang chờ test
+
