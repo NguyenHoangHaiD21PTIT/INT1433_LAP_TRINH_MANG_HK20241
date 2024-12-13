@@ -17,4 +17,3 @@ public class LietKeUoc {
         port.submitDataIntArray(msv, qCode, ans);
     }
 }
-//Chờ log
