@@ -14,4 +14,3 @@ public class DecToBin {
         port.submitDataStringArray(msv, qCode, ans);
     }
 }
-//Chờ log
