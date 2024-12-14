@@ -1,4 +1,4 @@
-Địa chỉ web luyện thi: http://203.162.10.109/Webcms
+Địa chỉ web luyện thi: http://203.162.10.109/Webcms (IP để đưa vào Socket cũng chính là IP Web)
 
 Tài khoản và mật khẩu là MSV viết hoa
 
