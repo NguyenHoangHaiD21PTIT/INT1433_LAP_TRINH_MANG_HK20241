@@ -25,8 +25,3 @@ public class QuanLyDuAn {
         port.submitListProject(msv, qCode, send);
     }
 }
-
-
-
-
-
