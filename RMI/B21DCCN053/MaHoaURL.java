@@ -17,3 +17,4 @@ public class MaHoaURL {
         sv.submitCharacter("B21DCCN053", "KkihaRAB", ans);
     }
 }
+//Sửa đề xong thì chịu không biết AC kiểu gì??
