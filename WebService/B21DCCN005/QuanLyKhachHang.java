@@ -1,7 +1,7 @@
 package WebService.B21DCCN005;
 import java.util.*;
 import java.time.*;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.time.temporal.ChronoUnit;
 import vn.medianews.*;
 public class QuanLyKhachHang {
     public static void main(String[] args) throws Exception {
@@ -12,15 +12,15 @@ public class QuanLyKhachHang {
         for (CustomerY x: cus) System.out.println(x);
         System.out.println();
         LocalDate today = LocalDate.now();
-        List<CustomerY> ans = new java.util.ArrayList<>();
-        for (CustomerY customer : cus) {
-            LocalDate lastTransactionDate = toLocalDate(customer.getLastTransactionDate());
-            if (lastTransactionDate.isBefore(today.minusMonths(6))) ans.add(customer);
+        List<CustomerY> ans = new ArrayList<>();
+        for (CustomerY x: cus) {
+            String t = x.getLastTransactionDate().toString();
+            t = t.substring(0, 10);
+            LocalDate old = LocalDate.parse(t);
+            long thang = ChronoUnit.MONTHS.between(old, today);
+            if(thang >=6) ans.add(x);
         }
         for (CustomerY x: ans) System.out.println(x);
         port.submitListCustomerY(msv, qCode, ans);
-    }
-    private static LocalDate toLocalDate(XMLGregorianCalendar calendar) {
-        return calendar.toGregorianCalendar().toZonedDateTime().toLocalDate();
     }
 }
