@@ -26,5 +26,9 @@ public class SanPham {
         System.out.println("San pham luc sau: " + product);
         out.writeObject(product);
         out.flush();
+        //Đóng kết nối, chú ý là phải có phần này nếu không sẽ bị máy chấm ngoại lệ
+        in.close();
+        out.close();
+        socket.close();
     }
 }
