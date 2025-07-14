@@ -40,3 +40,22 @@ public class DiaChi {
         in.close();out.close();socket.close();
     }
 }
+/* run:
+Exception in thread "main" java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: TCP.Address
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1660)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:495)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:453)
+	at TCP.DiaChi.main(DiaChi.java:32)
+Caused by: java.io.NotSerializableException: TCP.Address
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject(Unknown Source)
+	at Utils.QuestionUtils.Q1449(QuestionUtils.java:3746)
+	at TCP.ObjectStreamHandler.run(ObjectStreamHandler.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+C:\Users\Hai\AppData\Local\NetBeans\Cache\25\executor-snippets\run.xml:111: The following error occurred while executing this line:
+C:\Users\Hai\AppData\Local\NetBeans\Cache\25\executor-snippets\run.xml:68: Java returned: 1
+BUILD FAILED (total time: 0 seconds) */
