@@ -15,12 +15,12 @@ public class NenRLE {
             if (s.charAt(i) == s.charAt(i - 1))cnt++;
             else {
                 ans+=String.format("%c", s.charAt(i - 1));
-                if(cnt >=2) String.format("%d", cnt);
+                if(cnt >=2) ans+= String.format("%d", cnt);
                 cnt = 1;
             }
         }
         ans+=String.format("%c", s.charAt(s.length() - 1));
-        if(cnt >=2) String.format("%d", cnt);
+        if(cnt >=2) ans+= String.format("%d", cnt);
         return ans;
     }
     public static void main(String[] args) throws Exception{
@@ -47,4 +47,5 @@ public class NenRLE {
         bw.close();
         socket.close();
     }
+
 }
