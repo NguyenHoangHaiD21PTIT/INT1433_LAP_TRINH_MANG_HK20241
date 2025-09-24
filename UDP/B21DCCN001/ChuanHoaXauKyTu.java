@@ -1,6 +1,6 @@
 package UDP.B21DCCN001;
 import java.net.*;
-public class ChuanHoaChuoi {
+public class ChuanHoaXauKyTu {
     public static void main(String[] args) throws Exception{
         DatagramSocket socket = new DatagramSocket();
         InetAddress sA = InetAddress.getByName("203.162.10.109");
@@ -29,3 +29,4 @@ public class ChuanHoaChuoi {
         socket.send(dpGui1);
     }
 }
+
