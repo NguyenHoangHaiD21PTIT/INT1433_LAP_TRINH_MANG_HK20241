@@ -34,5 +34,8 @@ public class SanPham {
         System.out.println("San pham luc sau: " + product);
         out.writeObject(product);
         out.flush();
+        in.close(); out.close(); socket.close();
+        //Phải có dòng cuối đóng hết đấy nhé, tránh ngoại lệ
     }
 }
+
